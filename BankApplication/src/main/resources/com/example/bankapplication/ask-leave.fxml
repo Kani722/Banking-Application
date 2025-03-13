@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.bankapplication.AskLeave"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Button fx:id="backButton" text="Back" layoutX="10.0" layoutY="10.0" onAction="#handleBackButton"/>
+
+    <!-- Title Label -->
+    <Label text="Ask for Leave" layoutX="230.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <!-- Leave Reason -->
+    <Label text="Leave Reason:" layoutX="50.0" layoutY="70.0"/>
+    <TextArea fx:id="leaveReasonTextArea" layoutX="150.0" layoutY="60.0" prefWidth="400.0" prefHeight="80.0"/>
+
+    <!-- Leave Time -->
+    <Label text="Leave Time:" layoutX="50.0" layoutY="160.0"/>
+    <TextField fx:id="leaveTimeTextField" layoutX="150.0" layoutY="150.0" prefWidth="400.0"/>
+
+    <!-- Leave Date -->
+    <Label text="Leave Date:" layoutX="50.0" layoutY="210.0"/>
+    <DatePicker fx:id="leaveDatePicker" layoutX="150.0" layoutY="200.0" prefWidth="400.0"/>
+
+    <!-- Submit Button -->
+    <Button fx:id="submitButton" text="Submit Leave Request" layoutX="230.0" layoutY="270.0" prefWidth="180.0" onAction="#submitLeaveRequest"/>
+</AnchorPane>

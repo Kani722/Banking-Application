@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox spacing="30" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.bankapplication_admin.DashboardController">
+
+    <!-- Image on Left -->
+    <ImageView fx:id="bankImageView" fitWidth="400" fitHeight="400"/>
+
+    <!-- Right Side (Buttons + Table) -->
+    <VBox alignment="CENTER" spacing="15">
+
+        <!-- Action Buttons -->
+        <Button text="To Accepts" onAction="#acccpts"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px;"/>
+
+        <Button text="Accept Leaves" onAction="#handleAcceptLeaves"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px;"/>
+
+        <!-- Leave Requests Table -->
+        <TableView fx:id="leaveRequestTable">
+            <columns>
+                <TableColumn fx:id="reasonColumn" text="Reason" prefWidth="150"/>
+                <TableColumn fx:id="timeColumn" text="Time" prefWidth="100"/>
+                <TableColumn fx:id="dateColumn" text="Date" prefWidth="100"/>
+                <TableColumn fx:id="actionColumn" text="Action" prefWidth="200"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+
+</HBox>

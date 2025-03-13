@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankapplication.ViewLoansController">
+    <!-- Back Button -->
+    <Button fx:id="backButton" text="Back" layoutX="10.0" layoutY="10.0" onAction="#handleBackButton"/>
+
+    <!-- Table View -->
+    <TableView fx:id="loanTableView" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="loanIdColumn" text="ID"/>
+            <TableColumn fx:id="loanTypeColumn" text="Type"/>
+            <TableColumn fx:id="requesterColumn" text="Requester"/>
+            <TableColumn fx:id="emailColumn" text="Email"/>
+            <TableColumn fx:id="contactColumn" text="Contact"/>
+            <TableColumn fx:id="loanPriceColumn" text="Price"/>
+            <TableColumn fx:id="taxColumn" text="Tax"/>
+            <TableColumn fx:id="interestColumn" text="Rate"/>
+            <TableColumn fx:id="acceptColumn" text="Accept"/>
+            <TableColumn fx:id="sendToAdminColumn" text="Send to Admin"/>
+        </columns>
+    </TableView>
+</AnchorPane>

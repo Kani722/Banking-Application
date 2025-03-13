@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.bankapplication_admin.LoanRequestsPageController"
+            prefWidth="900" prefHeight="500">
+
+    <Label text="Loan Requests" style="-fx-font-size: 20px; -fx-font-weight: bold;"
+           AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+
+    <TableView fx:id="loanTable" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="50">
+        <columns>
+            <TableColumn fx:id="loanIdCol" text="Loan ID" prefWidth="80"/>
+            <TableColumn fx:id="typeCol" text="Type" prefWidth="120"/>
+            <TableColumn fx:id="requesterCol" text="Requester" prefWidth="180"/>
+            <TableColumn fx:id="emailCol" text="Email" prefWidth="200"/>
+            <TableColumn fx:id="contactCol" text="Contact" prefWidth="120"/>
+            <TableColumn fx:id="priceCol" text="Price" prefWidth="100"/>
+            <TableColumn fx:id="taxCol" text="Tax" prefWidth="80"/>
+            <TableColumn fx:id="interestCol" text="Interest" prefWidth="100"/>
+            <TableColumn fx:id="actionColumn" text="Action" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <!-- Back Button -->
+    <Button fx:id="backButton" text="Back"
+            AnchorPane.leftAnchor="10" AnchorPane.bottomAnchor="10"
+            onAction="#handleBackAction"/>
+
+</AnchorPane>
